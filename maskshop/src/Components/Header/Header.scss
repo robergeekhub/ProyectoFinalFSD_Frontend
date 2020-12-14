@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 15vh;
+    font-family: sans-serif;
+    color: black;
+    a,
+    span {
+        all: unset;
+        cursor: pointer;
+        padding:1.6em;
+    }
+.logout {
+        cursor: pointer;
+    }
+.logo{
+    margin: 1em;
+}
+
+}
