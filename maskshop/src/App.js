@@ -6,7 +6,7 @@ import Header from './Components/Header/Header'
 import Home from './Containers/Home/Home'
 import Login from './Containers/Login/Login'
 import Register from './Containers/Register/Register'
-
+import Products from './Containers/Products/Products'
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path='/' component={Home} exact />
         <Route path='/login' component={Login} exact />
         <Route path='/register' component={Register} exact />
+        <Route path='/products' component={Products} exact />
     </Switch>
     <Footer />
   </BrowserRouter>

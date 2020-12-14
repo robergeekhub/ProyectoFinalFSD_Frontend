@@ -18,7 +18,7 @@ const Header = ({user,setUser}) => {
             </div>
             <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="Busca en MaskShop..." role="textbox" spellcheck="false" type="text" value="" class="buscador" required="true"></input>   
             <Link to="/">Home</Link>
-                <Link to="/productos">Productos</Link>
+                <Link to="/products">Products</Link>
             {user ?
                 <div className="loggedIn">
                     <Link to="/profile">{user.email}</Link>

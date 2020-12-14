@@ -5,11 +5,10 @@ import {useHistory} from 'react-router';
 import {notification} from 'antd';
 import {} from 'react-router-dom';
 
-
 const Login = ({setClient}) => {
     const history = useHistory();
     const handleSubmit = event =>{
-      event.preventDefault(); // to prevent refreshing the page
+      event.preventDefault();
       const client ={
           email:event.target.email.value,
           password:event.target.password.value
@@ -24,21 +23,30 @@ const Login = ({setClient}) => {
           notification.success({message:'Welcome!',description:'Welcome to our application! '+client.email})
           
           setTimeout(() => {
-              history.push('/profile')
+              history.push('/products')
           }, 1000);
       })
       .catch(error=> {throw (error)})
   }
     return (
-        <form className="login-form" onSubmit={handleSubmit}>
-            <input type="email" name="email" required placeholder="Enter your email" />
-            <br></br>
-            <input type="password" name="password" required placeholder="Enter your password"/>
-            <br></br>
-            <button type="submit">Login</button>
-        </form>
+        <div>
+        <form>
+     <div class="mb-3">
+       <label for="exampleInputEmail1" class="form-label">Email address</label>
+       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+     </div>
+     <div class="mb-3">
+       <label for="exampleInputPassword1" class="form-label">Password</label>
+       <input type="password" class="form-control" id="exampleInputPassword1"></input>
+     </div>
+     <div class="mb-3 form-check">
+     </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+     </div>
         
     )
 }
 
-export default Login
+export default Login;
