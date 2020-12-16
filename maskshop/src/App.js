@@ -7,6 +7,7 @@ import Home from './Containers/Home/Home'
 import Login from './Containers/Login/Login'
 import Register from './Containers/Register/Register'
 import Products from './Containers/Products/Products'
+import Adminproducts from './Containers/Adminproducts/Adminproducts'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/login' component={Login} exact />
         <Route path='/register' component={Register} exact />
         <Route path='/products' component={Products} exact />
+        <Route path='/adminproducts' component={Adminproducts} exact />
     </Switch>
     <Footer />
   </BrowserRouter>
