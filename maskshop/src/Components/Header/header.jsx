@@ -14,7 +14,7 @@ const Header = ({user,setUser}) => {
         
         <header className="header">
             <div class="logo">
-            <img src={logo} height="120" width="120" alt={"MaskShop"}/> 
+            <img src={logo} height="124" width="124" alt={"MaskShop"}/> 
             </div>
             <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="Busca en MaskShop..." role="textbox" spellcheck="false" type="text" value="" class="buscador" required="true"></input>   
             <Link to="/">Home</Link>
@@ -28,6 +28,9 @@ const Header = ({user,setUser}) => {
                     <Link to="/login">Login</Link>
                     <Link to="/register">Register</Link>
                 </div>}
+                    <div className="containerCard">
+                    <div className="card"></div>
+                </div>
             
                   
         </header>

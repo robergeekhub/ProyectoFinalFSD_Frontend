@@ -16,5 +16,16 @@
 .logo{
     margin: 1em;
 }
-
+.containerCard{
+    background-color: chartreuse;
+    height: 3em;
+    width: 3.5em;
+    margin-left: 60em;    
+}
+.card{
+    background-image: url(../../img/cart.png);
+    background-repeat: no-repeat; 
+    width: 3m;
+    height: 3em;
+}
 }
