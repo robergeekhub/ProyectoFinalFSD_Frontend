@@ -1,58 +1,82 @@
-.containerproduct{
-    display: flex;
-    flex-direction: row;
-    color: #84a9ac;
-    height: 100vh;
-    width: 100vw
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-family:sans-serif;
 }
-.photo{
-    width: 200em;
-    height: 35em;
-    background-image: url(../../img/mascarilla-negro.png);
-    background-repeat: no-repeat; 
-    background-position: center; 
-    text-align: center;
+.row1{
     display: flex;
-    margin: 2em;
+    justify-content: space-between;
+    margin:5em;
 }
-.containerproduct2{
-    display: flex;
-    flex-direction: row;
-    color: #84a9ac;
-    height: 100vh;
-    width: 100vw
-}
-.photo2{
-    background-image: url(../../img/ffp2negro.png);
-    width: 60em;
-    height: 40em;
-    background-repeat: no-repeat; 
-    background-position: center; 
-    text-align: center;
-    display: flex;
+#containerproduct{
+    background-color: darkorange;
     margin:2em;
+    width: 20em;
+    height: 2em;
+}
+.photo1{
+    background-image: url(../../img/mascarilla-negro.png);
+    background-repeat: no-repeat;
+    width: 20em;
+    height: 20em;
+}
+.containerdescription{
+    background-color: white;
+    width: 20em;
+    height: 5em;
+    
 }
 .description{
-    background-color: blueviolet;
-    height: 3em;    
-    width: 25.5em;
-    display: flex;
-    background-position: center; 
-    text-align: center;
-    flex-direction: row;
-    font-family: sans-serif;
-    font-size: 2em;
-    position: center;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+}
+.price{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .link{
-    margin:0.7em;
-    margin-left: 1.2em;
     display: flex;
-    flex-direction:column;
     text-align: center;
     align-items: center;
     justify-content: center;
     color: rgb(8, 8, 8);
     text-decoration: none;
+    font-weight: bold;
+}
+.photo2{
+    background-image: url(../../img/ffp2negro.png);
+    background-repeat: no-repeat;
+    width: 20em;
+    height: 20em;
+}
+.photo3{
+    background-image: url(../../img/azules.png);
+    background-repeat: no-repeat;
+    width: 20em;
+    height: 20em;
+}
+.row2{
+    display: flex;
+    justify-content: space-between;
+    margin:5em;
+}
+.photo4{
+    background-image: url(../../img/ffp2blanco.png);
+    background-repeat: no-repeat;
+    width: 20em;
+    height: 20em
+}
+.photo5{
+    background-image: url(../../img/61wdE1UC6PL._SL1280_.png);
+    background-repeat: no-repeat;
+    width: 20em;
+    height: 20em
+}
+.photo6{
+    background-image: url(../../img/niños.png);
+    background-repeat: no-repeat;
+    width: 20em;
+    height: 20em
 }

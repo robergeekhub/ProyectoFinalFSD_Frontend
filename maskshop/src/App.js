@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
 import Footer from './Components/Footer/Footer'
@@ -9,8 +9,17 @@ import Register from './Containers/Register/Register'
 import Products from './Containers/Products/Products'
 import Adminproducts from './Containers/Adminproducts/Adminproducts'
 import Orders from './Containers/Orders/Orders'
+import AdminProfile from './Containers/AdminProfile/AdminProfile'
+
 
 function App() {
+  let initialClient = null;
+  try {
+    initialClient = JSON.parse(localStorage.getItem('client'));
+  } catch (error) {
+    console.error(error)
+  }
+  const [client, setClient] = useState(initialClient);
   return (
     <BrowserRouter>
     <Header />
@@ -20,6 +29,7 @@ function App() {
         <Route path='/register' component={Register} exact />
         <Route path='/products' component={Products} exact />
         <Route path='/adminproducts' component={Adminproducts} exact />
+        <Route path='/adminprofile' component={AdminProfile} exact />
         <Route path='/orders' component={Orders} exact />
     </Switch>
     <Footer />

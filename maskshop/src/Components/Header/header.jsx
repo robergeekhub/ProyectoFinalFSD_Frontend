@@ -16,7 +16,6 @@ const Header = ({user,setUser}) => {
             <div class="logo">
             <img src={logo} height="124" width="124" alt={"MaskShop"}/> 
             </div>
-            <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="Busca en MaskShop..." role="textbox" spellcheck="false" type="text" value="" class="buscador" required="true"></input>   
             <Link to="/">Home</Link>
                 <Link to="/products">Products</Link>
             {user ?
