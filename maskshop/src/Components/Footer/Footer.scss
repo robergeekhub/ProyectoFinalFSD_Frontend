@@ -1,0 +1,26 @@
+.footer{
+    display: block;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em;
+    height: 6.3em;
+    margin:0;
+    font-family: sans-serif;
+    width: 100%;
+    position: absolute;
+    a,
+    span {
+        color:rgb(197, 10, 10);
+        all: unset;
+        cursor: pointer;
+}
+}
+.Copyright{
+    color:white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

@@ -11,27 +11,25 @@ const Header = ({user,setUser}) => {
         setUser(null)
     }
     return (
-        
         <header className="header">
-            <div class="logo">
-            <img src={logo} height="124" width="124" alt={"MaskShop"}/> 
-            </div>
-            <Link to="/">Home</Link>
-                <Link to="/products">Products</Link>
-            {user ?
-                <div className="loggedIn">
-                    <Link to="/profile">{user.email}</Link>
-                    <span className="logout" onClick={logout}>Logout</span>
-                </div> :
-                <div className="notLoggedIn">
-                    <Link to="/login">Login</Link>
-                    <Link to="/register">Register</Link>
-                </div>}
-                    <div className="containerCard">
-                    <div className="card"></div>
+            <div className="containerlogo">
+                <div class="logo">
+                <img src={logo} height="100" width="100" alt={"MaskShop"}/> 
                 </div>
-            
-                  
+            </div>
+            <div className="containerHome">
+                    <Link to="/">Home</Link>
+            </div>
+            <div className="containerProducts">
+                <Link to="/products">Products</Link>
+            </div>
+            <div className="containerLogin">
+                <Link to="/login">Login</Link>
+            </div>
+            <div className="containerRegister">
+                <Link to="/register">Register</Link>
+            </div>
+
         </header>
     )
 }

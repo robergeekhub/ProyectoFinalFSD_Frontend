@@ -1,6 +1,6 @@
 import React from 'react';
-import AdminProfile from '../Containers/AdminProfile/AdminProfile'
-import AdminProducts from '../Containers/Adminproducts/Adminproducts'
+import AdminProfile from '../../Containers/AdminProfile/AdminProfile'
+import AdminProducts from '../../Containers/Adminproducts/Adminproducts'
 
 function CheckRoles(props) {
 

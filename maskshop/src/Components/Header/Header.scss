@@ -1,31 +1,70 @@
-.header {
+.header{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    min-height: 10vh;
+    padding: 0.8em;
+    height: 6.3em;
+    width: 117em;
+    margin: 1em;
+    font-family: sans-serif;
     a,
     span {
+        color:black;
         all: unset;
         cursor: pointer;
-        padding:1.6em;
-        color: black;
-        font-family: sans-serif;
-    }
-.logout {
-        cursor: pointer;
-    }
-.logo{
-    margin: 1em;
+       
 }
-.containerCard{
-    background-color: chartreuse;
-    height: 3em;
-    width: 3.5em;
-    margin-left: 60em;    
+.containerlogo{
+    display: flex;
+    background-color: blue;
+    width: 6em;
+    height: 6em;
+    margin-top: 1.5em;
+    margin:0;
 }
-.card{
-    background-image: url(../../img/cart.png);
-    background-repeat: no-repeat; 
-    width: 3m;
+
+.containerHome{
+    display: flex;
+    width: 16em;
     height: 3em;
+    margin:0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.containerProducts{
+    display: flex;
+    width: 16em;
+    height: 3em;
+    margin:0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+
+}
+.containerLogin{
+    display: flex;
+    flex-direction: row;
+    width: 16em;
+    height: 3em;
+    margin:0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+
+}
+.containerRegister{
+    display: flex;
+    flex-direction: row;
+    width: 16em;
+    height: 3em;
+    margin:0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+
 }
 }
