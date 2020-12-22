@@ -29,7 +29,9 @@ const Header = ({user,setUser}) => {
             <div className="containerRegister">
                 <Link to="/register">Register</Link>
             </div>
-
+            <div className="containercart">
+            <div className="card"></div>
+            </div>
         </header>
     )
 }

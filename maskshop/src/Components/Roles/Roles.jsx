@@ -2,7 +2,7 @@ import React from 'react';
 import AdminProfile from '../../Containers/AdminProfile/AdminProfile'
 import AdminProducts from '../../Containers/Adminproducts/Adminproducts'
 
-function CheckRoles(props) {
+function Roles(props) {
 
   const returnViewByRole = (props) => {
     console.log(props.client)
@@ -17,4 +17,4 @@ function CheckRoles(props) {
   );
 }
 
-export default CheckRoles;
+export default Roles;

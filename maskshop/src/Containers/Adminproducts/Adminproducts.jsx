@@ -15,10 +15,12 @@ const Adminproducts = () =>{
         console.log(headers);
         const productsBody={
           name: event.target.name.value,
+          description: event.target.description.value,
           price: event.target.price.value,
+          image_path: event.target.image_path.value,
           
         };
-        axios.post('http://localhost:8000/api/', productsBody, headers)
+        axios.post('http://localhost:8000/api/product/add', productsBody, headers)
         .then(res=> {
           console.log(res.data)
           notification.success({message: 'Products created.', description: 'Succesfully product created.'})
@@ -34,12 +36,12 @@ const Adminproducts = () =>{
         return (
     <form className="create-form" onSubmit={handleSubmit}>
     <Input type="name" name="name" required placeholder="Instruct your new product" />
+    <Input type="description" name="description" required placeholder="Enter a description" />
     <Input type="price" name="price" required placeholder="Enter the price" />
-    <button  type="primary" className='noStyle' htmlType="submit">Create product</button>
+    <Input type="image_path" name="image_path" required placeholder="Enter a image" />
+    <button type="primary" className='noStyle' htmlType="submit">Create product</button>
     </form> 
         )
     }
     
-
-
 export default Adminproducts;

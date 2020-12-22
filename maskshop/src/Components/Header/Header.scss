@@ -67,4 +67,20 @@
     text-decoration: none;
 
 }
+.containercart{
+    display: flex;
+    width: 2em;
+    height: 2em;
+    margin-left: 41em;
+}
+.card{
+    background-image: url(../../img/cart.svg);
+    width: 2em;
+    height: 2em;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0.5em;
+}
 }

@@ -1,5 +1,4 @@
 .footer{
-    display: block;
     background-color: black;
     display: flex;
     flex-direction: row;
@@ -10,7 +9,7 @@
     margin:0;
     font-family: sans-serif;
     width: 100%;
-    position: absolute;
+    position: relative;
     a,
     span {
         color:rgb(197, 10, 10);
