@@ -1,15 +1,15 @@
 import React from 'react';
-import AdminProfile from '../../Containers/AdminProfile/AdminProfile'
-import AdminProducts from '../../Containers/Adminproducts/Adminproducts'
+import Adminproducts from '../../Containers/Adminproducts/Adminproducts';
+import Products from '../../Containers/Products/Products'
 
 function Roles(props) {
 
   const returnViewByRole = (props) => {
     console.log(props.client)
     if(props.client.role === 'admin'){
-      return <AdminProfile client={props.client} setClient={props.setClient}/>
+      return <Adminproducts client={props.client} setClient={props.setClient}/>
     }else{
-      return <AdminProducts client={props.client} setClient={props.setClient}/>
+      return <Products client={props.client} setClient={props.setClient}/>
     }
   }
   return (

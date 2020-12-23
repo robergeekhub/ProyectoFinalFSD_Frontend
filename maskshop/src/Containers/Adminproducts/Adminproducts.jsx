@@ -35,10 +35,10 @@ const Adminproducts = () =>{
     }
         return (
     <form className="create-form" onSubmit={handleSubmit}>
-    <Input type="name" name="name" required placeholder="Instruct your new product" />
-    <Input type="description" name="description" required placeholder="Enter a description" />
-    <Input type="price" name="price" required placeholder="Enter the price" />
-    <Input type="image_path" name="image_path" required placeholder="Enter a image" />
+    <Input type="name" name="name" required placeholder="Instruct your new product" /><br></br>
+    <Input type="description" name="description" required placeholder="Enter a description" /><br></br>
+    <Input type="price" name="price" required placeholder="Enter the price" /><br></br>
+    <Input type="image_path" name="image_path" required placeholder="Enter a image" /><br></br>
     <button type="primary" className='noStyle' htmlType="submit">Create product</button>
     </form> 
         )
