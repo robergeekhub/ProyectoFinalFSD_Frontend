@@ -35,7 +35,7 @@ const Login = ({setClient}) => {
             <br></br>
             <input type="password" name="password" required placeholder="Enter your password"/>
             <br></br>
-            <button type="submit">Login</button>
+            <button className='buttonLogin' type="submit">Login</button>
         </form>
         
     )
