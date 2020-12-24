@@ -20,6 +20,7 @@ const Adminproducts = () =>{
           image_path: event.target.image_path.value,
           
         };
+        console.log(productsBody);
         axios.post('http://localhost:8000/api/product/add', productsBody, headers)
         .then(res=> {
           console.log(res.data)

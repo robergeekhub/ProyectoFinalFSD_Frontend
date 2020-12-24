@@ -1,102 +1,46 @@
 import React from 'react';
-import { Form, Input, Button, notification } from 'antd';
 import axios from 'axios';
+import {useHistory} from "react-router";
 import './Register.scss';
-import 'antd/dist/antd.css';
+import { Input, notification } from 'antd';
 
-const layout = {
-    labelCol: {
-        span: 90,
-    },
-    wrapperCol: {
-        span: 17,
-    },
-};
-const tailLayout = {
-    wrapperCol: {
-        offset: 8,
-        span: 16,
-    },
-};
-const Register = () => {
-    const onFinish = (user) => {
-        
-        axios.post('http://localhost:8000/api/register', user)
-            .then(res => {
-                console.log(res.data)
-                notification.success({ message :'registered user',description:'Registered user successfully'})
-            }).catch(error => {
-                console.log(error)
-                notification.error({ message: 'Registry error', description: 'There was an error trying to register the user, check your fields' })
-            })
-    };
 
-    const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
-    };
+const Register = () =>{
+
+    const history = useHistory();
+
+    const handleSubmit = event =>{
+        event.preventDefault(); 
+        const clientBody={
+            name: event.target.name.value,
+            email: event.target.email.value,
+            password: event.target.password.value
+        };
+        axios.post('http://localhost:8000/api/register', clientBody)
+        .then(res => {
+            console.log(res.data)
+            notification.success({ message :'Registered client.',description:'Succesfully registered client.'})
+            
+            setTimeout(() => {
+                history.push("/")
+            }, 1500);
+        }).catch(error => {
+            console.log(error)
+            notification.error({ message: 'Registration error.', description: 'There was an error trying to register the client.' })
+        })
+    }
+
     return (
-        <Form
-            {...layout}
-            name="basic"
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-        >
-            <Form.Item
-                label="Name"
-                name="name"
-                rules={[
-                    {
-                        required: true,
-                        message: 'Please enter your name!',
-                    },
-                ]}
-            >
-                <Input />
-            </Form.Item>
-            <Form.Item
-                label="Email"
-                name="email"
-                rules={[
-                    {
-                        required: true,
-                        message: 'Please enter your email!',
-                    },
-                    {
-                        type:'email',
-                        message: 'The field must be an email',
-                    }
-                ]}
-            >
-                <Input />
-            </Form.Item>
-
-            <Form.Item
-                label="Password"
-                name="password"
-                rules={[
-                    {
-                        required: true,
-                        message: 'Please enter your password!',
-                    },
-                    {
-                        pattern:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/, 
-                        message: 'Your password must contain at least one lower case, one upper case, one number, one special character, and must be between 8 and 10 characters in length!',
-                    }
-                ]}
-            >
-                <Input.Password />
-            </Form.Item>
-
-            <Form.Item {...tailLayout}>
-                <Button type="primary" htmlType="submit">
-                    Register
-        </Button>
-            </Form.Item>
-        </Form>
-    )
+        <form className="register-form" onSubmit={handleSubmit}>
+        <Input type="name" name="name" required placeholder="Enter your name" />
+        <br></br>
+        <Input type="email" name="email" required placeholder="Enter your email" />            
+        <br></br>
+        <Input type="password" name="password" required placeholder="Enter your password" />
+        <br></br>
+        <button className='buttonRegister' type="primary" htmlType="submit">Register</ button>
+        </form>
+)
 }
 
 export default Register;

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import 'antd/dist/antd.css';
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
 import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header'
@@ -9,7 +10,6 @@ import Register from './Containers/Register/Register'
 import Products from './Containers/Products/Products'
 import Adminproducts from './Containers/Adminproducts/Adminproducts'
 import Orders from './Containers/Orders/Orders'
-import Role from './Components/Roles/Roles'
 
 
 function App() {
