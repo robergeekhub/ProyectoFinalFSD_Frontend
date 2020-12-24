@@ -8,7 +8,7 @@ import Home from './Containers/Home/Home'
 import Login from './Containers/Login/Login'
 import Register from './Containers/Register/Register'
 import Products from './Containers/Products/Products'
-import Adminproducts from './Containers/Adminproducts/Adminproducts'
+import Createproducts from './Containers/Createproducts/Createproducts'
 import Orders from './Containers/Orders/Orders'
 
 
@@ -28,7 +28,7 @@ function App() {
         <Route path='/login' component={Login} exact />
         <Route path='/register' component={Register} exact />
         <Route path='/products' component={Products} exact />
-        <Route path='/adminproducts' component={Adminproducts} exact />
+        <Route path='/createproducts' component={Createproducts} exact />
         <Route path='/orders' component={Orders} exact />
     </Switch>
     <Footer />
