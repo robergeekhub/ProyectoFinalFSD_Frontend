@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component,useState } from 'react';
 import axios from 'axios'
 import './Createproducts.scss';
 import {useHistory} from "react-router";
-import {Link} from 'react-router-dom';
-import {Input, notification} from 'antd';
+import {Input,notification,} from 'antd';
 
  
-const Adminproducts = () =>{
+const Createproducts = () =>{
     const history = useHistory();
     const token = localStorage.getItem('authToken')
     const handleSubmit = event =>{
@@ -27,7 +26,7 @@ const Adminproducts = () =>{
           notification.success({message: 'Products created.', description: 'Succesfully product created.'})
   
           setTimeout(() => {
-            history.push("/")
+            history.push("/Showproducts")
         }, 1500);
         }).catch(error => {
           console.log(error)
@@ -39,10 +38,10 @@ const Adminproducts = () =>{
         <Input type="name" name="name" required placeholder="Instruct your new product" /><br></br>
         <Input type="description" name="description" required placeholder="Enter a description" /><br></br>
         <Input type="price" name="price" required placeholder="Enter the price" /><br></br>
-        <Input type="image_path" name="image_path" required placeholder="Enter a image" /><br></br>
+        <Input type="file" name="image_path" required placeholder="Enter image"></Input><br></br>
         <button type="primary" className='noStyle' htmlType="submit">Create product</button>
         </form> 
         )
     }
     
-export default Adminproducts;
+export default Createproducts;

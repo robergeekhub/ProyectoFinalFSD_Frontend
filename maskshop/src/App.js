@@ -9,6 +9,7 @@ import Login from './Containers/Login/Login'
 import Register from './Containers/Register/Register'
 import Products from './Containers/Products/Products'
 import Createproducts from './Containers/Createproducts/Createproducts'
+import Showproducts from './Containers/Showproducts/Showproducts'
 import Orders from './Containers/Orders/Orders'
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/register' component={Register} exact />
         <Route path='/products' component={Products} exact />
         <Route path='/createproducts' component={Createproducts} exact />
+        <Route path='/showproducts' component={Showproducts} exact />
         <Route path='/orders' component={Orders} exact />
     </Switch>
     <Footer />

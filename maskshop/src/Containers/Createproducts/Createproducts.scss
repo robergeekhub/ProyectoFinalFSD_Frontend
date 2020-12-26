@@ -1,11 +1,29 @@
-.create-form{
+.create-form {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    height: 40.5em; 
-    margin:2em;
-
-}
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    padding:13.6em;
+    input{
+      border-radius: 0.2em;
+      background-color: rgb(230, 236, 236);
+      width: 25em;
+      text-align: center;
+    }
+  }
+  .noStyle{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    border: none;
+    color:  #0a0a0a;
+    background-color: rgb(230, 236, 236);
+    cursor: pointer;
+    border-radius: 0.3em;
+    &:hover{
+      background-color: #0a0a0a;
+      color: #3EB6C2;
+    }
+  }
