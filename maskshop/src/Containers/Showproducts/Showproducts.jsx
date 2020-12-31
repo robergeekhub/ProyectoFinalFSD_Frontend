@@ -36,13 +36,13 @@ const Products = () =>{
       <div className="price">Price €</div>
       <div className="image_path">Image_path</div>
     </div>
-              <div className="containerproduct">
+              <div className="containerproductshow">
             {products?.map(product =>
                 <div key={product.id} className='infoProduct'>
-                  <div className='inside'>{product.name}</div>
-                  <div className='inside'>{product.description}</div>
-                  <div className='inside'>{product.price}</div>
-                  <div className='inside'>{product.image_path}</div>
+                  <div className='insidename'>{product.name}</div>
+                  <div className='insidedescription'>{product.description}</div>
+                  <div className='insideprice'>{product.price}</div>
+                  <div className='insideimage'>{product.image_path}</div>
                   <div className='buttondelete'><button className='deleteButton' onClick={()=> {deleteProduct(product.id)}}>X</button></div>
               </div>
             )}

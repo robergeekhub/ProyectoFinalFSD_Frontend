@@ -7,24 +7,44 @@
 }
 .maincontainerproducts{
     background-color: blanchedalmond;
-    height: 43em;
+    height: 44em;
 }
 .rowshow{
     display: flex;
     justify-content:space-evenly;
-    margin:2em;
+    margin:0em;
     font-weight: bold;
-    margin-right: 18em;
+    margin-right: 1em;
     text-decoration: underline;
 }
 .infoProduct{
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     margin-left: 15em;
 }
-.inside{
+.insidename{
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 38em;
+    margin-left: -9em;
+}
+.insidedescription{
+    display: flex;
+    margin-left: 16em;
+}
+.insideprice{
+    display: flex;
+    margin-left: 24em;
+}
+.insideimage{
+    display: flex;
+    margin-left: 18em;
+}
+.buttondelete{
+    display: flex;
+    margin-left:2.3em;
+}
+.containerproductshow{
+    background-color: rgb(235, 167, 65);
+    width: 88em;
+    height: 45em;
+    margin-left: 14em;
 }
