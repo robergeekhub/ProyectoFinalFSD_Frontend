@@ -5,20 +5,15 @@ import logo from '../../img/maskshop.jpg'
 
 const Header = ({user,setUser}) => {
 
-    const logout = () => {
-        localStorage.removeItem('user');
-        localStorage.removeItem('authToken');
-        setUser(null)
-    }
     return (
         <header className="header">
             <div className="containerlogo">
-                <div class="logo">
+                <div className="logo">
                 <img src={logo} height="100" width="100" alt={"MaskShop"}/> 
                 </div>
             </div>
             <div className="containerHome">
-                    <Link to="/">Home</Link>
+                <Link to="/">Home</Link>
             </div>
             <div className="containerProducts">
                 <Link to="/products">Products</Link>
@@ -27,10 +22,15 @@ const Header = ({user,setUser}) => {
                 <Link to="/login">Login</Link>
             </div>
             <div className="containerRegister">
+                <div className="containersignup">
                 <Link to="/register">Register</Link>
+                </div>
             </div>
-            <div className="containercart">
-            <div className="card"></div>
+            <div className="cart">
+                <span className="carnumber">0</span>
+                <Link to="/cart">
+                    <i className="fas fa-shopping-cart"></i>
+                </Link>
             </div>
         </header>
     )

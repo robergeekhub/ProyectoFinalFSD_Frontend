@@ -1,4 +1,4 @@
-import React, { Component,useState } from 'react';
+import React from 'react';
 import axios from 'axios'
 import './Createproducts.scss';
 import {useHistory} from "react-router";
@@ -11,7 +11,6 @@ const Createproducts = () =>{
     const handleSubmit = event =>{
         event.preventDefault();
         const headers = { headers: { Authorization: `${token}` }};
-        console.log(headers);
         const productsBody={
           name: event.target.name.value,
           description: event.target.description.value,
@@ -19,14 +18,13 @@ const Createproducts = () =>{
           image_path: event.target.image_path.value,
           
         };
-        console.log(productsBody);
         axios.post('http://localhost:8000/api/product/add', productsBody, headers)
         .then(res=> {
           console.log(res.data)
           notification.success({message: 'Products created.', description: 'Succesfully product created.'})
   
           setTimeout(() => {
-            history.push("/Showproducts")
+            history.push("/showproducts")
         }, 1500);
         }).catch(error => {
           console.log(error)

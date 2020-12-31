@@ -7,6 +7,7 @@
     width: 117em;
     margin: 1em;
     font-family: sans-serif;
+    font-weight: bold;
     a,
     span {
         color:black;
@@ -65,22 +66,18 @@
     justify-content: center;
     text-align: center;
     text-decoration: none;
-
 }
-.containercart{
+.containersignup{
     display: flex;
-    width: 2em;
-    height: 2em;
-    margin-left: 41em;
+    background-color: rgb(3, 250, 250);
+    border-radius: 2em;
+    width: 4em;
 }
-.card{
-    background-image: url(../../img/cart.svg);
-    width: 2em;
-    height: 2em;
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 0.5em;
+.carnumber{
+    background: yellow;
+}
+.cart{
+    margin-left: 35em;
+
 }
 }

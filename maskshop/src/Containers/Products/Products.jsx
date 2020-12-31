@@ -1,11 +1,19 @@
-import React, { } from 'react';
+import React from 'react';
 import './Products.scss';
 import { Link } from 'react-router-dom';
 
 const Products = () => {
+    const handleLogout = () => {
+        localStorage.removeItem('client');
+        localStorage.removeItem('authToken');
+        localStorage.clear();
+    }
     
 return (
     <div className="maincontainer">
+        <button onClick={handleLogout}>
+        <Link to='/' className='logout'>user logout</Link>
+        </button>
         <div className="row1">
             <div className="containerproduct">
                     <div className="photo1"></div>

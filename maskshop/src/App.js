@@ -11,7 +11,7 @@ import Products from './Containers/Products/Products'
 import Createproducts from './Containers/Createproducts/Createproducts'
 import Showproducts from './Containers/Showproducts/Showproducts'
 import Orders from './Containers/Orders/Orders'
-
+import Roles from './Components/Roles/Roles'
 
 function App() {
   let initialClient = null;
@@ -21,15 +21,20 @@ function App() {
     console.error(error)
   }
   const [client, setClient] = useState(initialClient);
+  
   return (
     <BrowserRouter>
     <Header />
     <Switch>
         <Route path='/' component={Home} exact />
-        <Route path='/login' component={Login} exact />
+        <Route path='/login' component={Login} exact >
+        <Login setClient={setClient}/>
+        </Route>
         <Route path='/register' component={Register} exact />
         <Route path='/products' component={Products} exact />
-        <Route path='/createproducts' component={Createproducts} exact />
+        <Route path='/createproducts' component={Createproducts} exact >
+          <Roles client={client} setClient={setClient}/>
+        </Route>
         <Route path='/showproducts' component={Showproducts} exact />
         <Route path='/orders' component={Orders} exact />
     </Switch>

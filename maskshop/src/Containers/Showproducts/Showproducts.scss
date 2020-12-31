@@ -3,17 +3,28 @@
     margin:0;
     margin-bottom: 0;
     font-family:sans-serif;
+    
 }
-.row1{
+.maincontainerproducts{
+    background-color: blanchedalmond;
+    height: 43em;
+}
+.rowshow{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     margin:2em;
     font-weight: bold;
-    padding: 2em;
+    margin-right: 18em;
+    text-decoration: underline;
 }
 .infoProduct{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     margin-left: 15em;
+}
+.inside{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 38em;
 }
