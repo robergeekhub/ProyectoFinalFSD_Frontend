@@ -1,0 +1,49 @@
+.rowcontact1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin:7em;
+}
+.containercontact{
+    flex-direction: row;
+    background-image: url(../../img/contacto.jpg);
+    background-repeat: no-repeat;
+    margin:3em;
+    width: 25em;
+    height: 25em;
+}
+.containerdescriptionforcontact{
+    flex-direction: row;
+    margin:3em;
+    width: 28em;
+    height: 23em;
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+.containerlink{
+    width: 24em;
+    height: 4em;
+    text-align: center;
+    justify-content: center;
+    margin:2em;
+}
+.containermail{
+    background-color: #32373c;
+    border: none;
+    border-radius: 1.75em;
+    box-shadow: none;
+    color: rgb(3, 250, 250);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+}
+.Linktomail{
+    text-decoration: none;
+}

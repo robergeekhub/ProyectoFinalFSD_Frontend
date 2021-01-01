@@ -8,6 +8,7 @@ import Home from './Containers/Home/Home'
 import Login from './Containers/Login/Login'
 import Register from './Containers/Register/Register'
 import Products from './Containers/Products/Products'
+import Contact from './Containers/Contact/Contact'
 import Createproducts from './Containers/Createproducts/Createproducts'
 import Showproducts from './Containers/Showproducts/Showproducts'
 import Orders from './Containers/Orders/Orders'
@@ -32,6 +33,7 @@ function App() {
         </Route>
         <Route path='/register' component={Register} exact />
         <Route path='/products' component={Products} exact />
+        <Route path='/contact' component={Contact} exact />
         <Route path='/createproducts' component={Createproducts} exact >
           <Roles client={client} setClient={setClient}/>
         </Route>

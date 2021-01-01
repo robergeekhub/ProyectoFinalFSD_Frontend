@@ -18,6 +18,9 @@ const Header = ({user,setUser}) => {
             <div className="containerProducts">
                 <Link to="/products">Products</Link>
             </div>
+            <div className="containerContact">
+                <Link to="/contact">Contact</Link>
+            </div>
             <div className="containerLogin">
                 <Link to="/login">Login</Link>
             </div>
