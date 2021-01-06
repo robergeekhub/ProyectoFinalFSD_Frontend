@@ -1,97 +1,16 @@
 *{
     box-sizing: border-box;
-    margin:0;
-    margin-bottom: 0;
+    margin:1em;
     font-family:sans-serif;
+    margin-bottom: 0%;
 }
-.logout{
-    text-decoration: none;
-    color: black;
-    align-items: flex-end;
-}
-.row1{
-    display: flex;
-    justify-content: space-between;
-    margin:5em;
-}
-#containerproduct{
-    background-color: darkorange;
-    margin:2em;
-    width: 20em;
-    height: 2em;
-}
-.photo1{
-    background-image: url(../../img/mascarilla-negro.png);
-    background-repeat: no-repeat;
-    width: 20em;
-    height: 20em;
-}
-.containerdescription{
-    background-color: white;
-    width: 20em;
-    height: 5em;
-    
-}
-.description{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: bold;
-}
-.price{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.link{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: rgb(8, 8, 8);
-    text-decoration: none;
-    font-weight: bold;
-}
-.photo2{
-    background-image: url(../../img/ffp2negro.png);
-    background-repeat: no-repeat;
-    width: 20em;
-    height: 20em;
-}
-.photo3{
-    background-image: url(../../img/azules.png);
-    background-repeat: no-repeat;
-    width: 20em;
-    height: 20em;
-}
-.row2{
-    display: flex;
-    justify-content: space-between;
-    margin:5em;
 
+.maincontainer{
+    height: 43.95em;
 }
-.photo4{
-    background-image: url(../../img/ffp2blanco.png);
-    background-repeat: no-repeat;
-    width: 20em;
-    height: 20em
-}
-.photo5{
-    background-image: url(../../img/61wdE1UC6PL._SL1280_.png);
-    background-repeat: no-repeat;
-    width: 20em;
-    height: 20em
-}
-.photo6{
-    background-image: url(../../img/niños.png);
-    background-repeat: no-repeat;
-    width: 20em;
-    height: 20em
-}
-.buttonBUY{
-    background-color: rgb(230, 236, 236);
-    width: 5em;
-    height: 1.5em;
+.products, .cart{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
     text-align: center;
-    margin-left: 7.5em;
 }

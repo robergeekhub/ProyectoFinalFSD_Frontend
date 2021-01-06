@@ -1,89 +1,51 @@
-import React from 'react';
+import React,{Component} from 'react';
+import { connect } from 'react-redux';
+import { addToCart } from '../../Redux/Actions/cartActions';
 import './Products.scss';
-import { Link } from 'react-router-dom';
 
-const Products = () => {
-    const handleLogout = () => {
-        localStorage.removeItem('client');
-        localStorage.removeItem('authToken');
-        localStorage.clear();
-    }
-    
-return (
-    <div className="maincontainer">
-        <button onClick={handleLogout}>
-        <Link to='/' className='logout'>user logout</Link>
-        </button>
-        <div className="row1">
-            <div className="containerproduct">
-                    <div className="photo1"></div>
-                    <div className="containerdescription">
-                    <div className="description">Disposable surgical-type black masks(Pack 50)</div>
-                    <div className="price">12€</div>
+class Products extends Component {
+
+    render() {
+      //this.props.cart se agrega a través de mapStateToProps
+      //this.props.removeFromCart se agrega a través de mapDispatchToProps
+      const productList = this.props.products.map( (item,index)  => {
+        return (
+            <div key={index}> 
+            <div className="maincontainer">
+                <div className="row1">
+                    <div className="containerproduct">
+                        <img src={item.image} alt="selected product" style={{ width: 400 }}/>
+                        <p style={{ color:'black',fontWeight:'bold'}}>{item.name}</p>
+                        <p>{item.description}</p>
+                        <p>{item.price}€</p>
+                        <button className="button" onClick={() => this.props.addToCart(item)}><i className="fas fa-shopping-cart"></i> Add to cart </button> 
                     </div>
-                <div className="buttonBUY">
-                    <Link to='/orders' className='link'>BUY</Link>
                 </div>
+            </div>    
             </div>
-            
-            <div className="containerproduct">
-                    <div className="photo2"></div>
-                    <div className="containerdescription">
-                    <div className="description">Black FFP2 approved masks (Pack 10)</div>
-                    <div className="price">15,95€</div>  
-                    </div>  
-                        <div className="buttonBUY">
-                        <Link to='/orders' className='link'>BUY</Link>
-                        </div>
-            </div>
-
-            <div className="containerproduct">
-                    <div className="photo3"></div>
-                    <div className="containerdescription">
-                    <div className="description">Blue surgical masks(Pack 50)</div>
-                    <div className="price">16,95€</div>  
-                    </div>  
-                        <div className="buttonBUY">
-                        <Link to='/orders' className='link'>BUY</Link>
-                        </div>
-            </div>
-        </div>
-        <div className="row2">
-            <div className="containerproduct">
-                    <div className="photo4"></div>
-                    <div className="containerdescription">
-                    <div className="description">Approved white FFP2 masks (Pack 10)</div>
-                    <div className="price">14,95€</div>  
-                    </div>  
-                        <div className="buttonBUY">
-                        <Link to='/orders' className='link'>BUY</Link>
-                        </div>
-            </div>
-            <div className="containerproduct">
-                    <div className="photo5"></div>
-                    <div className="containerdescription">
-                    <div className="description">Transparent masks(Pack 4)</div>
-                    <div className="price">9,95€</div>  
-                    </div>  
-                        <div className="buttonBUY">
-                        <Link to='/orders' className='link'>BUY</Link>
-                        </div>
-            </div>
-            <div className="containerproduct">
-                    <div className="photo6"></div>
-                    <div className="containerdescription">
-                    <div className="description">Children's masks(Pack 50)</div>
-                    <div className="price">14,95€</div>  
-                    </div>  
-                        <div className="buttonBUY">
-                        <Link to='/orders' className='link'>BUY</Link>
-                        </div>
-            </div>
-        </div>
-    </div>
-
+        )
     
-)
-}
-
-export default Products;
+      });
+  
+      return (
+        <div className= "products">
+           { productList }
+        </div>
+      );
+    }
+  }
+  
+  function mapStateToProps(state, props) {
+      return {
+          products: state.products
+      };
+  }
+  
+  function mapDispatchToProps(dispatch) {
+      return {
+          addToCart: item => dispatch(addToCart(item))
+      }
+  }
+  
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Products);

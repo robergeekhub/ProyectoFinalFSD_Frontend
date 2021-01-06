@@ -2,9 +2,26 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import './Header.scss';
 import logo from '../../img/maskshop.jpg'
+import {useHistory} from 'react-router';
+import axios from 'axios';
+import {notification} from 'antd';
 
-const Header = ({user,setUser}) => {
-
+const Header = ({setClient}) =>{
+    const history = useHistory();
+  
+    const logout = async () =>{
+        try{
+          axios.post(`http://localhost:3000/api/logout?access_token=${localStorage.getItem('access_token')}`)       
+          localStorage.removeItem('authToken')
+          localStorage.removeItem('client')
+          notification.success({message:'¡Goodbye!',description:'We look forward to seeing you soon.'})
+             setTimeout(() => {
+                history.push('/')
+            }, 1000); 
+        }catch (error) {
+          console.log(error);
+      }
+      }
     return (
         <header className="header">
             <div className="containerlogo">
@@ -29,8 +46,8 @@ const Header = ({user,setUser}) => {
                 <Link to="/register">Register</Link>
                 </div>
             </div>
-            <div className="cart">
-                <span className="carnumber">0</span>
+            <button className='buttonheader'  onClick={logout}><i className="fas fa-user"></i>Logout<i className="fas fa-sign-out-alt"></i></button>
+            <div className="cart">         
                 <Link to="/cart">
                     <i className="fas fa-shopping-cart"></i>
                 </Link>

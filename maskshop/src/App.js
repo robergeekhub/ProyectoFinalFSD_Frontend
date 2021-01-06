@@ -13,6 +13,7 @@ import Createproducts from './Containers/Createproducts/Createproducts'
 import Showproducts from './Containers/Showproducts/Showproducts'
 import Orders from './Containers/Orders/Orders'
 import Roles from './Components/Roles/Roles'
+import Cart from './Components/Cart/Cart'
 
 function App() {
   let initialClient = null;
@@ -29,7 +30,7 @@ function App() {
     <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/login' component={Login} exact >
-        <Login setClient={setClient}/>
+          <Login setClient={setClient}/>
         </Route>
         <Route path='/register' component={Register} exact />
         <Route path='/products' component={Products} exact />
@@ -39,6 +40,7 @@ function App() {
         </Route>
         <Route path='/showproducts' component={Showproducts} exact />
         <Route path='/orders' component={Orders} exact />
+        <Route path='/cart' component={Cart} exact />
     </Switch>
     <Footer />
   </BrowserRouter>
